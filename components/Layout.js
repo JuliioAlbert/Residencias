@@ -1,16 +1,21 @@
 import Header from "./Header";
-
+import Head from 'next/head';
 const Layout = ({ children }) => {
     return (
-        <div className="bg-blue-600   min-h-screen">
-            <div className="container mx-auto ">
-               <Header/>
-                <main className="mt-10 ">
-                    {children}
+        <>
+            <Head>
+                <title>ControlMovil</title>
+            </Head>
+            <div className=" bg-gray-700 min-h-screen">
+                <Header />
 
-                </main>
+                <div className="container mx-auto">
+                    <main className="mt-20">
+                        {children}
+                    </main>
+                </div>
             </div>
-        </div>
+        </>
     );
 }
 
